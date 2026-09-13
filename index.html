@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleo Club UU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container text-center text-white">
+            <h1>Welcome to Paleo Club UU</h1>
+            <p class="lead">A student community for paleontology at Utrecht University</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+        <div class="container">
+            <div class="d-flex align-items-center navbar-brand-wrapper">
+                <img src="images/zonder achtergrond.png" alt="Paleo Club UU logo" class="navbar-logo">
+                <span class="navbar-brand mb-0 h5">Paleo Club UU</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="who-we-are.html">Who We Are</a></li>
+                            <li><a class="dropdown-item" href="meet-the-board-2025-2026.html">Meet the Board</a></li>
+                            <li><a class="dropdown-item" href="honorable-members.html">Honorable Members</a></li>
+                            <li><a class="dropdown-item" href="code-of-conduct.html">Code of Conduct</a></li>
+                            <li><a class="dropdown-item" href="privacy-statement.html">Privacy Statement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="events.html" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                            <li><a class="dropdown-item" href="upcoming-events.html">Upcoming Events</a></li>
+                            <li><a class="dropdown-item" href="past-events.html">Past Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="translate-container ms-lg-3 mt-3 mt-lg-0">
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="main-content py-5">
+            <div class="container">
+                <div class="row gx-4 align-items-stretch mb-4">
+                    <div class="col-lg-7">
+                        <div class="card about-preview p-4 shadow-sm">
+                            <h2>About Us</h2>
+                            <p>Welcome to the Paleo Club UU. We are a community for students at Utrecht University with a shared passion for paleontology. Founded in 2024, we bring together people fascinated by life’s history on Earth, from microscopic fossils to the largest dinosaurs and whales.</p>
+                            <p>With an enthusiastic board and a growing group of over 80 active members, we regularly organize lectures, symposia, and workshops, alongside informal events where students can connect and exchange ideas. Whether you’re just starting out or already deeply engaged in paleontology, our club offers a place to explore, learn, and meet like-minded people. <a href="who-we-are.html" class="read-more-link">> read more</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 right-column">
+                        <div class="card p-3 shadow-sm right-col-block">
+                            <h2>Join our club</h2>
+                            <p class="text-muted">Interested in our club? Join us for free and stay up to date with all our events.</p>
+                            <a href="sign-up.html" class="btn btn-terra become-member-btn">Sign Up</a>
+                        </div>
+                        <div class="card p-3 shadow-sm right-col-block">
+                            <h3>What should we do next?</h3>
+                            <p class="text-muted">Suggest a topic, speaker, or activity for an upcoming meeting.</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsYVagghVTJ7RuJTJg236H-uuDMJhK_Lv4zivQYTXWFo0oTw/viewform" target="_blank" class="btn btn-terra">Submit Suggestion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="card past-events p-4 shadow-sm">
+                            <h3>Past Events</h3>
+                            <p class="text-muted">Click a photo to explore our past meetings.</p>
+                            <div class="slideshow">
+                                <a href="past-events.html"><div class="slide active" style="background-image: url('images/WhatsApp Image 2026-03-27 at 20.41.24.jpeg');"></div></a>
+                                <a href="past-events.html"><div class="slide" style="background-image: url('images/bijgesneden.jpeg');"></div></a>
+                                <a href="past-events.html"><div class="slide" style="background-image: url('images/Mosasaur symposium.jpeg');"></div></a>
+                                <a href="past-events.html"><div class="slide-content">
+                                    <h3 id="slide-title">Paleoart Workshop Joschua Knüppe</h3>
+                                    <p id="slide-subtitle" class="slide-subtitle"></p>
+                                </div></a>
+                            </div>
+                            <div class="indicators" style="text-align: center; margin-top: 10px;">
+                                <span class="indicator" data-slide="0" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
+                                <span class="indicator" data-slide="1" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
+                                <span class="indicator" data-slide="2" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card p-3 shadow-sm right-col-block upcoming-block">
+                            <h3>Upcoming Events</h3>
+                            <p>Explore our planned lectures, workshops and networking meetings.</p>
+                            <a href="upcoming-events.html" class="btn btn-terra">View Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-contact">
+                        <p class="footer-contact-label">Contact</p>
+                        <p class="footer-contact-email">e-mail: paleoclub@uu.nl</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end social-links">
+                    <a href="https://www.linkedin.com/groups/13096679" target="_blank" rel="noreferrer"><i class="bi bi-linkedin"></i><span class="visually-hidden">LinkedIn</span></a>
+                    <a href="https://discord.gg/9TJTpDUhQH" target="_blank" rel="noreferrer"><i class="bi bi-discord"></i><span class="visually-hidden">Discord</span></a>
+                    <a href="https://www.instagram.com/paleoclub_uu?igsh=MXZ0bnF4b2dsd3pyNQ==" target="_blank" rel="noreferrer"><i class="bi bi-instagram"></i><span class="visually-hidden">Instagram</span></a>
+                </div>
+            </div>
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">© 2026 Paleo Club Utrecht University</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'nl,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', function() {
+            const fade = Math.max(0, 1 - window.scrollY / 300);
+            hero.style.opacity = fade;
+        });
+
+        const slideTitles = [
+            'Paleoart Workshop Joschua Knüppe',
+            'A peek inside the university’s fossil botany collection',
+            'Mosasaur Symposium'
+        ];
+        const slideSubtitles = [
+            'A workshop on the scientific influence of paleoart, accurate reconstructions ... > read more',
+            'A behind-the-scenes visit to the university’s fossil botany collection ... > read more',
+            'A day focused on spectacular marine reptiles ... > read more'
+        ];
+        const slides = document.querySelectorAll('.slideshow .slide');
+        const slideTitle = document.getElementById('slide-title');
+        const slideSubtitle = document.getElementById('slide-subtitle');
+        const indicators = document.querySelectorAll('.indicator');
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            slideTitle.textContent = slideTitles[index];
+            slideSubtitle.textContent = slideSubtitles[index];
+            indicators.forEach((ind, i) => {
+                ind.style.backgroundColor = i === index ? '#333' : '#ccc';
+            });
+        }
+
+        function rotateSlides() {
+            showSlide(slideIndex);
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+
+        indicators.forEach((ind, index) => {
+            ind.addEventListener('click', () => {
+                slideIndex = index;
+                showSlide(slideIndex);
+            });
+        });
+
+        showSlide(0);
+        setInterval(rotateSlides, 5000);
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
