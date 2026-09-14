@@ -89,20 +89,8 @@
                         <div class="card past-events p-4 shadow-sm">
                             <h3>Past Events</h3>
                             <p class="text-muted">Click a photo to explore our past meetings.</p>
-                            <div class="slideshow">
-                                <a href="past-events.html"><div class="slide active" style="background-image: url('images/WhatsApp Image 2026-03-27 at 20.41.24.jpeg');"></div></a>
-                                <a href="past-events.html"><div class="slide" style="background-image: url('images/bijgesneden.jpeg');"></div></a>
-                                <a href="past-events.html"><div class="slide" style="background-image: url('images/Mosasaur symposium.jpeg');"></div></a>
-                                <a href="past-events.html"><div class="slide-content">
-                                    <h3 id="slide-title">Paleoart Workshop Joschua Knüppe</h3>
-                                    <p id="slide-subtitle" class="slide-subtitle"></p>
-                                </div></a>
-                            </div>
-                            <div class="indicators" style="text-align: center; margin-top: 10px;">
-                                <span class="indicator" data-slide="0" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
-                                <span class="indicator" data-slide="1" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
-                                <span class="indicator" data-slide="2" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;"></span>
-                            </div>
+                            <div class="slideshow" id="pastEventsSlideshow"></div>
+                            <div class="indicators" id="pastEventsIndicators" style="text-align: center; margin-top: 10px;"></div>
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -142,6 +130,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="nav.js"></script>
+    <script src="events.js"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -157,47 +146,82 @@
             hero.style.opacity = fade;
         });
 
-        const slideTitles = [
-            'Paleoart Workshop Joschua Knüppe',
-            'A peek inside the university’s fossil botany collection',
-            'Mosasaur Symposium'
-        ];
-        const slideSubtitles = [
-            'A workshop on the scientific influence of paleoart, accurate reconstructions ... > read more',
-            'A behind-the-scenes visit to the university’s fossil botany collection ... > read more',
-            'A day focused on spectacular marine reptiles ... > read more'
-        ];
-        const slides = document.querySelectorAll('.slideshow .slide');
-        const slideTitle = document.getElementById('slide-title');
-        const slideSubtitle = document.getElementById('slide-subtitle');
-        const indicators = document.querySelectorAll('.indicator');
-        let slideIndex = 0;
+        // Past Events slideshow: built from window.paleoClubEvents (events.js),
+        // reusing the same past-event filtering logic as the Past Events page,
+        // so any past event added to events.js appears here automatically.
+        const slideshowEl = document.getElementById('pastEventsSlideshow');
+        const indicatorsEl = document.getElementById('pastEventsIndicators');
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            slideTitle.textContent = slideTitles[index];
-            slideSubtitle.textContent = slideSubtitles[index];
-            indicators.forEach((ind, i) => {
-                ind.style.backgroundColor = i === index ? '#333' : '#ccc';
-            });
+        if (slideshowEl && indicatorsEl && window.paleoClubEvents) {
+            const today = getLocalDateString();
+            const pastEventsForSlideshow = window.paleoClubEvents
+                .filter((event) => event.date && event.date < today && event.image)
+                .sort((first, second) => second.date.localeCompare(first.date));
+
+            if (pastEventsForSlideshow.length > 0) {
+                const indicatorDotStyle = 'display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;';
+
+                pastEventsForSlideshow.forEach((event, index) => {
+                    const slideLink = document.createElement('a');
+                    slideLink.href = event.details || 'past-events.html';
+                    const slideDiv = document.createElement('div');
+                    slideDiv.className = index === 0 ? 'slide active' : 'slide';
+                    slideDiv.style.backgroundImage = `url('${event.image}')`;
+                    slideLink.appendChild(slideDiv);
+                    slideshowEl.appendChild(slideLink);
+
+                    const indicator = document.createElement('span');
+                    indicator.className = 'indicator';
+                    indicator.dataset.slide = String(index);
+                    indicator.style.cssText = indicatorDotStyle;
+                    indicatorsEl.appendChild(indicator);
+                });
+
+                const overlayLink = document.createElement('a');
+                overlayLink.href = pastEventsForSlideshow[0].details || 'past-events.html';
+                const slideContent = document.createElement('div');
+                slideContent.className = 'slide-content';
+                slideContent.innerHTML = '<h3 id="slide-title"></h3><p id="slide-subtitle" class="slide-subtitle"></p>';
+                overlayLink.appendChild(slideContent);
+                slideshowEl.appendChild(overlayLink);
+
+                const slides = slideshowEl.querySelectorAll('.slide');
+                const indicators = indicatorsEl.querySelectorAll('.indicator');
+                const slideTitle = document.getElementById('slide-title');
+                const slideSubtitle = document.getElementById('slide-subtitle');
+                let slideIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                    });
+                    const event = pastEventsForSlideshow[index];
+                    slideTitle.textContent = event.title;
+                    slideSubtitle.textContent = `${event.description} > read more`;
+                    overlayLink.href = event.details || 'past-events.html';
+                    indicators.forEach((ind, i) => {
+                        ind.style.backgroundColor = i === index ? '#333' : '#ccc';
+                    });
+                }
+
+                function rotateSlides() {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                indicators.forEach((ind, index) => {
+                    ind.addEventListener('click', () => {
+                        slideIndex = index;
+                        showSlide(slideIndex);
+                    });
+                });
+
+                showSlide(0);
+                if (slides.length > 1) {
+                    setInterval(rotateSlides, 5000);
+                }
+            }
         }
-
-        function rotateSlides() {
-            showSlide(slideIndex);
-            slideIndex = (slideIndex + 1) % slides.length;
-        }
-
-        indicators.forEach((ind, index) => {
-            ind.addEventListener('click', () => {
-                slideIndex = index;
-                showSlide(slideIndex);
-            });
-        });
-
-        showSlide(0);
-        setInterval(rotateSlides, 5000);
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
