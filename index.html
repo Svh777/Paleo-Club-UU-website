@@ -166,7 +166,7 @@
                     slideLink.href = event.details || 'past-events.html';
                     const slideDiv = document.createElement('div');
                     slideDiv.className = index === 0 ? 'slide active' : 'slide';
-                    slideDiv.style.backgroundImage = `url('${event.image}')`;
+                    slideDiv.style.backgroundImage = `url("${event.image}")`;
                     slideLink.appendChild(slideDiv);
                     slideshowEl.appendChild(slideLink);
 
