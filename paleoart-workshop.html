@@ -72,17 +72,25 @@
             </section>
             <section class="event-photos">
                 <h2>Photos</h2>
-                <div id="paleoartPhotoSlider" class="carousel slide event-photo-slider" data-bs-ride="false" data-bs-interval="3500" data-bs-pause="false">
+                <div id="paleoartWorkshopPhotoSlider" class="carousel slide event-photo-slider" data-bs-ride="false" data-bs-interval="3500" data-bs-pause="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Photo 1"></button>
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="1" aria-label="Photo 2"></button>
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="2" aria-label="Photo 3"></button>
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="3" aria-label="Photo 4"></button>
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="4" aria-label="Photo 5"></button>
+                        <button type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide-to="5" aria-label="Photo 6"></button>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active"><img src="images/Paleo art Workshop/1.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 1"></div>
-                        <div class="carousel-item"><img src="images/Paleo art Workshop/3.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 3"></div>
-                        <div class="carousel-item"><img src="images/Paleo art Workshop/4.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 4"></div>
-                        <div class="carousel-item"><img src="images/Paleo art Workshop/5.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 5"></div>
-                        <div class="carousel-item"><img src="images/Paleo art Workshop/6.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 6"></div>
-                        <div class="carousel-item"><img src="images/Paleo art Workshop/7.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 7"></div>
+                        <div class="carousel-item"><img src="images/Paleo art Workshop/3.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 2"></div>
+                        <div class="carousel-item"><img src="images/Paleo art Workshop/4.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 3"></div>
+                        <div class="carousel-item"><img src="images/Paleo art Workshop/5.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 4"></div>
+                        <div class="carousel-item"><img src="images/Paleo art Workshop/6.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 5"></div>
+                        <div class="carousel-item"><img src="images/Paleo art Workshop/7.jpeg" class="d-block w-100" alt="Paleoart Workshop by Joschua Knüppe, photo 6"></div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#paleoartPhotoSlider" data-bs-slide="prev" aria-label="Previous photo"><span class="carousel-control-prev-icon"></span></button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#paleoartPhotoSlider" data-bs-slide="next" aria-label="Next photo"><span class="carousel-control-next-icon"></span></button>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide="prev" aria-label="Previous photo"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#paleoartWorkshopPhotoSlider" data-bs-slide="next" aria-label="Next photo"><span class="carousel-control-next-icon"></span></button>
                 </div>
             </section>
         </div>
@@ -114,23 +122,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="nav.js"></script>
     <script src="event-carousel.js"></script>
-    <script>
-        const paleoartSlider = document.getElementById('paleoartPhotoSlider');
-        const paleoartSlides = paleoartSlider.querySelectorAll('.carousel-item');
-        const paleoartIndicators = document.createElement('div');
-        paleoartIndicators.className = 'carousel-indicators';
-        paleoartSlides.forEach((slide, index) => {
-            const indicator = document.createElement('button');
-            indicator.type = 'button';
-            indicator.dataset.bsTarget = '#paleoartPhotoSlider';
-            indicator.dataset.bsSlideTo = index;
-            indicator.className = index === 0 ? 'active' : '';
-            indicator.setAttribute('aria-label', `Photo ${index + 1}`);
-            if (index === 0) indicator.setAttribute('aria-current', 'true');
-            paleoartIndicators.appendChild(indicator);
-        });
-        paleoartSlider.prepend(paleoartIndicators);
-    </script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({

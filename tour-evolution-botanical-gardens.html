@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Events - Paleo Club UU</title>
+    <title>Tour Evolution – Botanical Gardens - Paleo Club UU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -34,7 +34,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="events.html" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="events.html" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Events
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
@@ -54,11 +54,41 @@
 
     <main class="py-5">
         <div class="container">
-            <div class="past-events-intro">
-                <h1>Past Events</h1>
-                <p class="lead">Review our club’s recent gatherings, lectures, and field activities.</p>
-            </div>
-            <div class="row" data-event-list="past"></div>
+            <h1>Tour Evolution – Botanical Gardens</h1>
+            <section class="event-recap-overview">
+                <h2>Event Overview</h2>
+                <p>In spring 2025, we were given an exclusive guided tour of the <a href="https://www.uu.nl/en/botanic-gardens/the-gardens/evolution-garden" target="_blank" rel="noopener noreferrer">Evolution Garden at the Utrecht University Botanic Gardens</a>, shortly before it opened to the public.</p>
+                <p>Dr. Edwin Post, Scientific Director of the gardens, took us on a journey through plant evolution, following the major changes that allowed plants to establish themselves on land and diversify into the forms we see today. We began with early groups such as algae and mosses and then explored subsequent adaptations, including increasing vertical growth, drought resistance, and the coevolution of plants with other organisms.</p>
+                <p>Throughout the tour, Dr. Post encouraged us to ask questions and discuss different aspects of plant evolution. Rather than simply presenting the garden as a collection of plants, he challenged us to look at the evolutionary processes behind them and to think critically about how these adaptations shaped the history of life on land.</p>
+                <p>Approaching the subject from an evolutionary biology perspective gave us a fascinating way to explore plant evolution, and the tour provided plenty of opportunities to connect what we saw in the garden with broader questions about the history of life.</p>
+            </section>
+            <section class="event-details">
+                <h2>Event Details</h2>
+                <div class="event-details-grid">
+                    <div><p class="event-detail-label">Date</p><p class="event-detail-value">8 May 2025</p></div>
+                    <div><p class="event-detail-label">Time</p><p class="event-detail-value">15:00</p></div>
+                    <div><p class="event-detail-label">Location</p><p class="event-detail-value">Utrecht University Botanic Gardens – Evolution Garden</p></div>
+                </div>
+            </section>
+            <section class="event-photos">
+                <h2>Photos</h2>
+                <div id="tourEvolutionPhotoSlider" class="carousel slide event-photo-slider" data-bs-ride="false" data-bs-interval="3500" data-bs-pause="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Photo 1"></button>
+                        <button type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide-to="1" aria-label="Photo 2"></button>
+                        <button type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide-to="2" aria-label="Photo 3"></button>
+                        <button type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide-to="3" aria-label="Photo 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="images/Tour Evolution part botanical gardens/1.jpg" class="d-block w-100" alt="Tour Evolution – Botanical Gardens, photo 1"></div>
+                        <div class="carousel-item"><img src="images/Tour Evolution part botanical gardens/2.jpg" class="d-block w-100" alt="Tour Evolution – Botanical Gardens, photo 2"></div>
+                        <div class="carousel-item"><img src="images/Tour Evolution part botanical gardens/3.jpeg" class="d-block w-100" alt="Tour Evolution – Botanical Gardens, photo 3"></div>
+                        <div class="carousel-item"><img src="images/Tour Evolution part botanical gardens/4.jpeg" class="d-block w-100" alt="Tour Evolution – Botanical Gardens, photo 4"></div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide="prev" aria-label="Previous photo"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#tourEvolutionPhotoSlider" data-bs-slide="next" aria-label="Next photo"><span class="carousel-control-next-icon"></span></button>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -87,7 +117,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="nav.js"></script>
-    <script src="events.js"></script>
+    <script src="event-carousel.js"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({

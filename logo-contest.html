@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Events - Paleo Club UU</title>
+    <title>Logo Contest - Paleo Club UU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -34,7 +34,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="events.html" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="events.html" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Events
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
@@ -54,11 +54,44 @@
 
     <main class="py-5">
         <div class="container">
-            <div class="past-events-intro">
-                <h1>Past Events</h1>
-                <p class="lead">Review our club’s recent gatherings, lectures, and field activities.</p>
-            </div>
-            <div class="row" data-event-list="past"></div>
+            <h1>Logo Contest</h1>
+            <section class="event-recap-overview">
+                <h2>Event Overview</h2>
+                <p>At the beginning of 2026, we invited our members to take part in a paleo-art contest to design a new logo for the Paleo Club UU. The contest brought together a wide range of creative ideas and showcased the artistic talent within our community.</p>
+                <p>We received many impressive submissions, each offering a different interpretation of what the Paleo Club could look like. After the submission period, the entries were put to a vote, and Marielle Greup’s design was chosen as the winning logo.</p>
+                <p>Her design combines a classic ammonite motif with the name of the club, creating a logo that connects the club to paleontology while remaining simple and recognisable. We were delighted with the result and have adopted it as the official Paleo Club UU logo.</p>
+            </section>
+            <section class="event-details">
+                <h2>Event Details</h2>
+                <div class="event-details-grid">
+                    <div><p class="event-detail-label">Date</p><p class="event-detail-value">2 February 2026 – 27 February 2026</p></div>
+                    <div><p class="event-detail-label">Time</p><p class="event-detail-value">—</p></div>
+                    <div><p class="event-detail-label">Location</p><p class="event-detail-value">Online / Paleo Club UU</p></div>
+                </div>
+            </section>
+            <section class="event-photos">
+                <h2>Photos</h2>
+                <div id="logoContestPhotoSlider" class="carousel slide event-photo-slider" data-bs-ride="false" data-bs-interval="3500" data-bs-pause="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Photo 1"></button>
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="1" aria-label="Photo 2"></button>
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="2" aria-label="Photo 3"></button>
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="3" aria-label="Photo 4"></button>
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="4" aria-label="Photo 5"></button>
+                        <button type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide-to="5" aria-label="Photo 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="images/Logo Contest/1.png" class="d-block w-100" alt="Logo Contest, photo 1"></div>
+                        <div class="carousel-item"><img src="images/Logo Contest/2.jpeg" class="d-block w-100" alt="Logo Contest, photo 2"></div>
+                        <div class="carousel-item"><img src="images/Logo Contest/3.jpeg" class="d-block w-100" alt="Logo Contest, photo 3"></div>
+                        <div class="carousel-item"><img src="images/Logo Contest/4.jpeg" class="d-block w-100" alt="Logo Contest, photo 4"></div>
+                        <div class="carousel-item"><img src="images/Logo Contest/5.jpeg" class="d-block w-100" alt="Logo Contest, photo 5"></div>
+                        <div class="carousel-item"><img src="images/Logo Contest/6.jpeg" class="d-block w-100" alt="Logo Contest, photo 6"></div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide="prev" aria-label="Previous photo"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#logoContestPhotoSlider" data-bs-slide="next" aria-label="Next photo"><span class="carousel-control-next-icon"></span></button>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -87,7 +120,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="nav.js"></script>
-    <script src="events.js"></script>
+    <script src="event-carousel.js"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({

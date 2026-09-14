@@ -28,6 +28,68 @@ window.paleoClubEvents = [
         image: 'images/bijgesneden.jpeg',
         alt: 'Fossil Botany Collection',
         details: 'fossil-botany-collection.html'
+    },
+    {
+        title: 'Logo Contest',
+        date: '2026-02-27',
+        description: "Members entered a paleo-art contest to design a new club logo, with Marielle Greup's ammonite design voted the winner.",
+        image: 'images/Logo Contest/1.png',
+        alt: 'Logo Contest',
+        details: 'logo-contest.html'
+    },
+    {
+        title: 'Paleontology from a Bird\'s Eye Perspective',
+        date: '2025-05-28',
+        description: 'A mini symposium on fossil birds, from feather colours to marine fossils and the North Sea fossil record.',
+        image: "images/Paleontology from a Bird's Eye Perspective/1.jpeg",
+        alt: "Paleontology from a Bird's Eye Perspective",
+        details: 'paleontology-birds-eye-perspective.html'
+    },
+    {
+        title: 'Tour Evolution – Botanical Gardens',
+        date: '2025-05-08',
+        description: 'An exclusive guided tour of the new Evolution Garden, exploring the history of plant evolution with Dr. Edwin Post.',
+        image: 'images/Tour Evolution part botanical gardens/1.jpg',
+        alt: 'Tour Evolution – Botanical Gardens',
+        details: 'tour-evolution-botanical-gardens.html'
+    },
+    {
+        title: 'Whale Symposium',
+        date: '2025-02-24',
+        description: 'An afternoon exploring whales, from living cetaceans and strandings to their extinct relatives and evolutionary history.',
+        image: 'images/Whale symposium/1.png',
+        alt: 'Whale Symposium',
+        details: 'whale-symposium.html'
+    },
+    {
+        title: 'Behind the Scenes Tour – Natuurhistorisch Museum Rotterdam',
+        date: '2025-01-24',
+        description: "A behind-the-scenes look at the museum's extensive collections, guided by conservator Bram Langeveld.",
+        image: 'images/Behind the scenes tour Natuurhistorisch Rotterdam/1.jpg',
+        alt: 'Behind the Scenes Tour – Natuurhistorisch Museum Rotterdam',
+        details: 'behind-the-scenes-tour-rotterdam.html'
+    },
+    {
+        title: 'Hands-on Conodont Meeting',
+        date: '2024-12-03',
+        description: 'A hands-on session exploring conodont fossils, plus a lecture on fossil plants and a visit to the university collections.',
+        image: 'images/Hands-on Conodont meeting/1.jpg',
+        alt: 'Hands-on Conodont Meeting',
+        details: 'hands-on-conodont-meeting.html'
+    },
+    {
+        title: 'Visit to the Paleobotany Collection',
+        date: '2024-11-19',
+        description: 'A talk and guided visit exploring fossil plants and the Utrecht University paleobotany collections.',
+        image: 'images/Visit to paleobotany collection/1.jpg',
+        alt: 'Visit to the Paleobotany Collection',
+        details: 'visit-to-paleobotany-collection.html'
+    },
+    {
+        title: 'First Meeting of the Paleo Club',
+        date: '2024-10-02',
+        description: 'The very first Paleo Club UU meeting, bringing founding members together to kick off the club community.',
+        details: 'first-meeting-paleo-club.html'
     }
 ];
 
